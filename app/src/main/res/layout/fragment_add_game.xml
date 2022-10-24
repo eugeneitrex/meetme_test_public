@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="by.test.meetmetest.ui.games.addgame.AddGameViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/player1Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:padding="10dp"
+            android:background="@drawable/player_stroke_rectangle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/choosePlayer1"
+                style="@style/AddGameBtn"
+                android:onClick="@{() -> viewModel.onChoosePlayerClicked(true)}"
+                android:text="@string/add_game_choose_player_1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/player1Name"
+                style="@style/AddGameNAme"
+                android:hint="@string/add_game_choose_player_hint"
+                android:text="@{viewModel.p1NameLiveData}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/choosePlayer1" />
+
+            <TextView
+                android:id="@+id/player1Id"
+                style="@style/AddGamePLayerId"
+                android:text="@{@string/add_game_id(viewModel.p1IdLiveData)}"
+                app:layout_constraintTop_toBottomOf="@+id/player1Name"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="playerID" />
+
+            <EditText
+                android:id="@+id/player1score"
+                style="@style/AddGameScore"
+                android:hint="@string/add_game_score_1"
+                android:imeOptions="actionNext"
+                android:text="@={viewModel.p1ScoreLiveData}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/player1Id" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/player2Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_margin="15dp"
+            android:padding="10dp"
+            android:background="@drawable/player_stroke_rectangle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/player1Layout">
+
+            <Button
+                android:id="@+id/choosePlayer2"
+                style="@style/AddGameBtn"
+                android:onClick="@{() -> viewModel.onChoosePlayerClicked(false)}"
+                android:text="@string/add_game_choose_player_2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/player2Name"
+                style="@style/AddGameNAme"
+                android:hint="@string/add_game_choose_player_hint"
+                android:text="@{viewModel.p2NameLiveData}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/choosePlayer2" />
+
+            <TextView
+                android:id="@+id/player2Id"
+                style="@style/AddGamePLayerId"
+                android:text="@{@string/add_game_id(viewModel.p2IdLiveData)}"
+                app:layout_constraintTop_toBottomOf="@+id/player2Name"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="playerID" />
+
+            <EditText
+                android:id="@+id/player2score"
+                style="@style/AddGameScore"
+                android:hint="@string/add_game_score_2"
+                android:imeOptions="actionDone"
+                android:text="@={viewModel.p2ScoreLiveData}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/player2Id" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/white"
+            android:onClick="@{() -> viewModel.onSaveGameClicked()}"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_save" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

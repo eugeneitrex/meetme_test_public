@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="5dp"
+        android:background="@color/grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bookItemLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp">
+
+            <TextView
+                android:id="@+id/gameDate"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="2022"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/GameDateItem" />
+
+            <TextView
+                android:id="@+id/gameTime"
+                app:layout_constraintStart_toEndOf="@+id/gameDate"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="10dp"
+                tools:text="16:46"
+                style="@style/GameDateItem"/>
+
+            <ImageView
+                android:id="@+id/gameEdit"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_more"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:id="@+id/gameMiddleDivider"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_battle"
+                android:fontFamily="@font/raleway_regular"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="@dimen/game_margin_top_item"
+                android:layout_marginTop="@dimen/game_margin_top_item"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gameDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/gameScore1"
+                tools:text="5"
+                app:layout_constraintEnd_toStartOf="@+id/gameMiddleDivider"
+                app:layout_constraintTop_toTopOf="@+id/gameMiddleDivider"
+                app:layout_constraintBottom_toBottomOf="@+id/gameMiddleDivider"
+                style="@style/PlayerBaseScoreFirst"/>
+
+            <TextView
+                android:id="@+id/gameScore2"
+                tools:text="2"
+                app:layout_constraintStart_toEndOf="@+id/gameMiddleDivider"
+                app:layout_constraintTop_toTopOf="@+id/gameMiddleDivider"
+                app:layout_constraintBottom_toBottomOf="@+id/gameMiddleDivider"
+                style="@style/PlayerBaseScoreFirst"/>
+
+            <TextView
+                android:id="@+id/gamePlayerName1"
+                tools:text="Eugene"
+                app:layout_constraintEnd_toStartOf="@+id/gameScore1"
+                app:layout_constraintTop_toBottomOf="@id/gameDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                style="@style/PlayerBaseTextView" />
+
+            <TextView
+                android:id="@+id/gamePlayerName2"
+                tools:text="Dmitry"
+                app:layout_constraintStart_toEndOf="@id/gameScore2"
+                app:layout_constraintTop_toBottomOf="@id/gameDate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                style="@style/PlayerBaseTextView"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

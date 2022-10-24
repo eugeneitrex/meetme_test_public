@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PlayerBaseTextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/player_item_horiz_margin</item>
+        <item name="android:layout_marginEnd">@dimen/player_item_horiz_margin</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">@dimen/game_margin_top_item</item>
+        <item name="android:layout_marginBottom">@dimen/game_margin_top_item</item>
+    </style>
+
+    <style name="PlayerBaseScoreFirst">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/player_item_score_horiz_margin</item>
+        <item name="android:layout_marginEnd">@dimen/player_item_score_horiz_margin</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="GameDateItem">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/raleway_light</item>
+        <item name="android:textColor">@color/main_black</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+    <style name="AddGameBtn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AddGameNAme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AddGamePLayerId">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AddGameScore">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">31sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:maxLength">4</item>
+        <item name="android:digits">0123456789</item>
+        <item name="android:inputType">numberDecimal</item>
+    </style>
+</resources>

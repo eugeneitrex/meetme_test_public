@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">MeetMeTest</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="nav_header_title">FOOSBALL</string>
+    <string name="nav_header_subtitle">by Eugene Voronoy</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="menu_all">All</string>
+    <string name="menu_wins">Top winners</string>
+    <string name="more">More…</string>
+    <string name="menu_book_details">Player details</string>
+    <string name="list_no_items">No players here</string>
+    <string name="menu_played">Top played</string>
+    <string name="menu_add_game">Add Game</string>
+    <string name="menu_edit_game">Edit Game</string>
+    <string name="add_game_id">id=%s</string>
+    <string name="add_game_choose_player_1">Choose Player 1</string>
+    <string name="add_game_choose_player_hint">Name of player</string>
+    <string name="add_game_score_1">Score 1</string>
+    <string name="add_game_choose_player_2">Choose Player 2</string>
+    <string name="add_game_score_2">Score 2</string>
+    <string name="add_game_error_name_1">Invalid name (player 1)</string>
+    <string name="add_game_error_score_1">Invalid score (Player 1)</string>
+    <string name="add_game_error_name_2">Invalid name (player 2)</string>
+    <string name="add_game_error_score_2">Invalid score (Player 2)</string>
+    <string name="add_game_error_score_equals">Scores are equal</string>
+    <string name="add_game_error_players_equals">Players are equal</string>
+    <string name="menu_game_edit">Edit</string>
+    <string name="menu_game_delete">Delete</string>
+</resources>

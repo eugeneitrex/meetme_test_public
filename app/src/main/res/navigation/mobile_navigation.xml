@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_games">
+
+    <fragment
+        android:id="@+id/nav_games"
+        android:name="by.test.meetmetest.ui.games.GamesFragment"
+        android:label="@string/menu_all"
+        tools:layout="@layout/fragment_games" />
+
+    <fragment
+        android:id="@+id/nav_wins"
+        android:name="by.test.meetmetest.ui.top.topwinners.TopWinnersFragment"
+        android:label="@string/menu_wins"
+        tools:layout="@layout/fragment_players" />
+
+    <fragment
+        android:id="@+id/nav_played"
+        android:name="by.test.meetmetest.ui.top.topplayed.TopPlayedFragment"
+        android:label="@string/menu_played"
+        tools:layout="@layout/fragment_players" />
+
+    <fragment
+        android:id="@+id/nav_add_game"
+        android:name="by.test.meetmetest.ui.games.addgame.AddGameFragment"
+        android:label="@string/menu_add_game"
+        tools:layout="@layout/fragment_add_game" />
+
+    <fragment
+        android:id="@+id/nav_edit_game"
+        android:name="by.test.meetmetest.ui.games.editgame.EditGameFragment"
+        android:label="@string/menu_edit_game"
+        tools:layout="@layout/fragment_add_game" />
+
+
+</navigation>
